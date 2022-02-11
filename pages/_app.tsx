@@ -7,7 +7,6 @@ import { ComponentType } from 'react'
 
 function MyApp(props: AppProps) {
   const { Component, pageProps }: { Component: any; pageProps: any } = props
-
   return (
     <AuthProvider>
       {Component.requireAuth ? (

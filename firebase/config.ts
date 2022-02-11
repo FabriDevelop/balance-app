@@ -3,12 +3,12 @@ import { initializeApp, getApp, getApps, FirebaseApp } from 'firebase/app'
 let app: FirebaseApp
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAiiAimuVOfNg9onmbvT7Y61x--zOTF01g',
-  authDomain: 'balance-c7069.firebaseapp.com',
-  projectId: 'balance-c7069',
-  storageBucket: 'balance-c7069.appspot.com',
-  messagingSenderId: '514440607511',
-  appId: '1:514440607511:web:625caf315770a452aea952',
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 }
 
 if (getApps().length) {

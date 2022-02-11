@@ -7,6 +7,7 @@ import logo from '../assets/logo.svg'
 import { FcGoogle } from 'react-icons/fc'
 import { AiFillGithub } from 'react-icons/ai'
 import { getErrorMessage } from '../utils/registerErrorMessages'
+import Link from 'next/link'
 
 export default function login() {
   const { loginWithGoogle, login, error, setError } = useAuth()
@@ -32,7 +33,7 @@ export default function login() {
             <label className="label">Email:</label>
             <input
               type="email"
-              className="input"
+              className="input w-80"
               placeholder="tucorreo@mail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -43,23 +44,23 @@ export default function login() {
             <label className="label">Contraseña:</label>
             <input
               type="password"
-              className="input"
+              className="input w-80"
               value={pass}
               onChange={(e) => setPass(e.target.value)}
             />
           </div>
           {error && <p className="text-red-600">{getErrorMessage(error)}</p>}
-          <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-col items-start gap-5">
             <div className="flex gap-3">
               <button
-                className="button bg-primary-500 text-white hover:bg-primary-600"
+                className="button bg-primary-500 text-white shadow-lg hover:bg-primary-600"
                 type="submit"
               >
                 Ingresar
               </button>
 
               <button
-                className="button flex items-center gap-3 bg-gray-200"
+                className="button flex items-center gap-3 bg-gray-200 shadow-lg"
                 onClick={async (e) => {
                   await loginWithGoogle(e)
                   Router.push('/')
@@ -72,9 +73,11 @@ export default function login() {
 
             <p className="self-start font-bold">
               No tienes cuenta?{' '}
-              <span className="cursor-pointer text-primary-500 hover:text-primary-600">
-                Regístrate
-              </span>{' '}
+              <Link href={'/register'}>
+                <span className="cursor-pointer text-primary-500 hover:text-primary-600">
+                  Regístrate
+                </span>
+              </Link>
             </p>
           </div>
         </form>
