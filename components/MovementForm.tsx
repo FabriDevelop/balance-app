@@ -61,6 +61,7 @@ export default function MovementForm() {
       md:gap-5"
       onSubmit={handleSubmit}
     >
+      <h2 className="text-center text-lg font-bold">Agregar movimiento: </h2>
       <div className="flex flex-col gap-2">
         <label>Tipo de movimiento:</label>
         <div className="flex gap-1">

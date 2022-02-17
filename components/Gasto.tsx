@@ -32,12 +32,12 @@ export default function Gasto({ gasto, setGastoEdit, openModal }: GastoProps) {
   }
 
   return (
-    <li className="grid w-full grid-cols-4 justify-between gap-10 py-2.5">
-      <p className="text-xl font-light text-red-600">
+    <li className="grid w-full grid-cols-3 justify-between gap-1 py-2.5 sm:gap-2 md:grid-cols-4 md:gap-10">
+      <p className="font-light text-red-600 md:text-xl">
         {currencyFormat(amount)}
       </p>
 
-      <p>{moment(createdAt).fromNow()}</p>
+      <p className="hidden md:inline-grid">{moment(createdAt).fromNow()}</p>
 
       <p>{category}</p>
 

@@ -13,8 +13,8 @@ export default function Home() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-        className="container -m-24 mx-auto flex h-screen max-w-5xl flex-col 
-              items-center justify-center gap-16 md:flex-row"
+        className="container mx-auto flex h-screen max-w-5xl 
+              flex-col-reverse items-center justify-center gap-3 md:flex-row md:gap-16"
       >
         <MovementForm />
         <BalanceInfo />

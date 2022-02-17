@@ -25,7 +25,7 @@ const customStyles = {
 }
 
 export default function GastosList() {
-  const { gastos, loading, error, getGastoPerCategory } = useGastos()
+  const { gastos, loading, getGastoPerCategory } = useGastos()
 
   const [modalIsOpen, setIsOpen] = useState(false)
   const [currentCategory, setCurrentCategory] = useState<string>('')
@@ -54,7 +54,7 @@ export default function GastosList() {
       transition={{ type: 'spring', stiffness: 260, damping: 20 }}
       className=" flex-col items-center gap-3 bg-white"
     >
-      <div className="flex items-center justify-center gap-5 text-dark">
+      <div className="flex items-center justify-center gap-5 text-sm text-dark md:text-base">
         <BiFilterAlt fontSize={24} />
         <label className="ml-1 text-lg font-bold">Categoria: </label>
         <select
@@ -76,7 +76,7 @@ export default function GastosList() {
       {loading ? (
         <Spinner />
       ) : (
-        <ul className="mt-4 h-[380px] overflow-y-auto">
+        <ul className="mt-4 h-[380px] overflow-x-auto overflow-y-auto text-sm md:text-base">
           {gastos.map((gasto: IGasto) => (
             <Gasto
               key={gasto.id}

@@ -30,21 +30,20 @@ export default function Ingreso({ ingreso }: IngresoProps) {
   }
 
   return (
-    <li className="grid w-full grid-cols-3 justify-between gap-10 py-2">
+    <li className="grid w-full grid-cols-3 justify-between gap-4 py-2 md:gap-10">
       <p className="text-xl font-light text-primary-500">
         {currencyFormat(amount)}
       </p>
 
       <p>{moment(createdAt).fromNow()}</p>
 
-      <div>
-        <button
-          className="button bg-red-600 text-sm text-white"
-          onClick={() => onClickDelete()}
-        >
-          <BiTrashAlt />
-        </button>
-      </div>
+      <button
+        className="button flex items-center gap-2 bg-red-600 text-sm text-white"
+        onClick={() => onClickDelete()}
+      >
+        Eliminar
+        <BiTrashAlt />
+      </button>
     </li>
   )
 }

@@ -14,7 +14,7 @@ export default function IngresosList() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ type: 'spring', stiffness: 260, damping: 20 }}
       className="flex  flex-col items-center 
-      gap-3 bg-white"
+      justify-center gap-3 bg-white"
     >
       {loading ? (
         <Spinner />
