@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { SetStateAction, Dispatch } from 'react'
 import Link from 'next/link'
 
 import { BiChart, BiHistory, BiHomeAlt } from 'react-icons/bi'
 import { useRouter } from 'next/router'
 
-export default function NavItems() {
+type NavItemsProps = {
+  setOpenMenu: Dispatch<boolean>
+}
+
+export default function NavItems({ setOpenMenu }: NavItemsProps) {
   const router = useRouter()
 
   return (
@@ -14,6 +18,7 @@ export default function NavItems() {
           className={
             router.pathname === '/' ? 'nav-item text-primary-500' : 'nav-item'
           }
+          onClick={() => setOpenMenu(false)}
         >
           Panel Principal
           <BiHomeAlt fontSize={24} />
@@ -26,6 +31,7 @@ export default function NavItems() {
               ? 'nav-item text-primary-500'
               : 'nav-item'
           }
+          onClick={() => setOpenMenu(false)}
         >
           Registro de movimientos
           <BiHistory fontSize={24} />
@@ -38,6 +44,7 @@ export default function NavItems() {
               ? 'nav-item text-primary-500'
               : 'nav-item'
           }
+          onClick={() => setOpenMenu(false)}
         >
           Estadísticas
           <BiChart fontSize={24} />

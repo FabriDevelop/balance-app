@@ -18,7 +18,7 @@ export default function BalanceInfo() {
   }, [totalGastos, totalIngresos])
 
   return (
-    <section className="flex flex-col items-center justify-center gap-6 md:items-start">
+    <section className="flex flex-col items-start justify-center gap-6">
       <div className="flex flex-col gap-2">
         <p className="text-gray-500">Saldo actual: </p>
         {loading ? (

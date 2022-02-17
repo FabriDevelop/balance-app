@@ -39,7 +39,7 @@ export default function Navbar() {
               <div className="lg:hidden">
                 <Image src={logo} alt="balance-logo" />
               </div>
-              <NavItems />
+              <NavItems setOpenMenu={setOpenMenu} />
             </ul>
           </div>
         )}
@@ -49,7 +49,7 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden gap-6 xl:flex">
-          <NavItems />
+          <NavItems setOpenMenu={setOpenMenu} />
         </ul>
 
         <div className="flex items-center gap-3">
