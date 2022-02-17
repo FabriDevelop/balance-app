@@ -32,7 +32,10 @@ export default function Gasto({ gasto, setGastoEdit, openModal }: GastoProps) {
   }
 
   return (
-    <li className="grid w-full grid-cols-3 justify-between gap-1 py-2.5 sm:gap-2 md:grid-cols-4 md:gap-10">
+    <li
+      className="grid w-full grid-cols-3 items-center justify-between gap-1 py-2.5 sm:gap-2 md:grid-cols-4
+    md:gap-10"
+    >
       <p className="text-center font-light text-red-600 md:text-left md:text-xl">
         {currencyFormat(amount)}
       </p>
