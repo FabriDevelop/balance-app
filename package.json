@@ -9,18 +9,17 @@
     "chart.js": "^3.7.1",
     "firebase": "^9.6.6",
     "framer-motion": "^6.2.6",
-    "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "next": "latest",
     "react": "^17.0.2",
-    "react-burger-menu": "^3.0.6",
     "react-chartjs-2": "^4.0.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-modal": "^3.14.4",
     "react-spinners": "^0.11.0",
     "sweetalert2": "^11.4.0",
-    "sweetalert2-react-content": "^4.2.0"
+    "sweetalert2-react-content": "^4.2.0",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@types/node": "17.0.4",

@@ -62,10 +62,10 @@ export default function estadisticas() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-        className="container mx-auto mt-4 grid h-[100vh-90px] grid-flow-row grid-cols-1 
+        className="container mx-auto mt-4 grid grid-flow-row grid-cols-1 
          gap-4 overflow-y-auto pr-5 lg:grid-flow-col lg:grid-cols-2"
       >
-        <section className="col-span-2 flex flex-col bg-white p-5 shadow-xl">
+        <section className="col-span-1 flex flex-col bg-white p-5 shadow-xl">
           <div className="flex items-center gap-4">
             <h2 className="font bold text-2xl">Ingresos vs Gastos</h2>
             <select

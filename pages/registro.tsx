@@ -16,7 +16,7 @@ export default function registro() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-        className="container m-10  mx-auto flex h-screen
+        className="container m-10  mx-auto flex 
                  max-w-5xl flex-col items-center justify-start gap-8"
       >
         <div className="flex gap-1">

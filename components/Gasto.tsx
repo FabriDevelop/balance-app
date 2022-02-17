@@ -33,15 +33,15 @@ export default function Gasto({ gasto, setGastoEdit, openModal }: GastoProps) {
 
   return (
     <li className="grid w-full grid-cols-3 justify-between gap-1 py-2.5 sm:gap-2 md:grid-cols-4 md:gap-10">
-      <p className="font-light text-red-600 md:text-xl">
+      <p className="text-center font-light text-red-600 md:text-left md:text-xl">
         {currencyFormat(amount)}
       </p>
 
       <p className="hidden md:inline-grid">{moment(createdAt).fromNow()}</p>
 
-      <p>{category}</p>
+      <p className="text-center md:text-left">{category}</p>
 
-      <div className="flex gap-3">
+      <div className="flex justify-center gap-3">
         <button
           className="button bg-blue-700 text-sm text-white"
           onClick={() => {

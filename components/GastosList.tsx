@@ -76,7 +76,10 @@ export default function GastosList() {
       {loading ? (
         <Spinner />
       ) : (
-        <ul className="mt-4 h-[380px] overflow-x-auto overflow-y-auto text-sm md:text-base">
+        <ul
+          className="mt-4 h-[350px] text-sm scrollbar-hide md:overflow-x-auto 
+        md:overflow-y-auto md:text-base md:scrollbar-default"
+        >
           {gastos.map((gasto: IGasto) => (
             <Gasto
               key={gasto.id}

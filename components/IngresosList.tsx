@@ -13,13 +13,13 @@ export default function IngresosList() {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-      className="flex  flex-col items-center 
+      className="flex flex-col items-center 
       justify-center gap-3 bg-white"
     >
       {loading ? (
         <Spinner />
       ) : (
-        <ul className="h-[380px] overflow-y-auto">
+        <ul className="h-[350px] scrollbar-hide md:overflow-y-auto md:scrollbar-default">
           {ingresos.map((ingreso: IIngreso) => (
             <Ingreso key={ingreso.id} ingreso={ingreso} />
           ))}

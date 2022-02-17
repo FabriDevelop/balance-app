@@ -38,7 +38,7 @@ export default function Ingreso({ ingreso }: IngresoProps) {
       <p>{moment(createdAt).fromNow()}</p>
 
       <button
-        className="button flex items-center gap-2 bg-red-600 text-sm text-white"
+        className="button flex items-center justify-center gap-1 bg-red-600 text-sm text-white"
         onClick={() => onClickDelete()}
       >
         Eliminar

@@ -16,7 +16,11 @@ export function AuthGuard({ children }: { children: JSX.Element }) {
   }, [initializing, router, user])
 
   if (initializing) {
-    return <Spinner></Spinner>
+    return (
+      <div className="flex h-screen items-center justify-center">
+        <Spinner />
+      </div>
+    )
   }
 
   if (!initializing && user) {

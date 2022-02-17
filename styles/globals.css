@@ -64,10 +64,6 @@ input[type='number'] {
     @apply bg-primary-600;
   }
 
-  body {
-    @apply md:overflow-hidden;
-  }
-
   table {
     @apply w-fit;
   }

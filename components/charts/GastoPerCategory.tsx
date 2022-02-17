@@ -36,5 +36,7 @@ export default function GastoPerCategory() {
     }
   }, [gastos])
 
-  return <div>{data && <Pie data={data} height={20} />}</div>
+  return (
+    <div className="px-16 py-4">{data && <Pie data={data} height={10} />}</div>
+  )
 }
