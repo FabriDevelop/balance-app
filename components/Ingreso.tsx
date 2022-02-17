@@ -30,7 +30,7 @@ export default function Ingreso({ ingreso }: IngresoProps) {
   }
 
   return (
-    <li className="grid w-full grid-cols-3 justify-between gap-4 py-2 md:gap-10">
+    <li className="grid w-full grid-cols-3 items-center justify-between gap-4 py-2 md:gap-10">
       <p className="text-xl font-light text-primary-500">
         {currencyFormat(amount)}
       </p>
