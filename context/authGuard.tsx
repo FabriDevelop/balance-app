@@ -1,6 +1,7 @@
 import { useAuth } from './auth'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import Spinner from '../components/Spinner'
 
 export function AuthGuard({ children }: { children: JSX.Element }) {
   const { user, initializing } = useAuth()
@@ -15,7 +16,7 @@ export function AuthGuard({ children }: { children: JSX.Element }) {
   }, [initializing, router, user])
 
   if (initializing) {
-    return <h1>Loading...</h1>
+    return <Spinner></Spinner>
   }
 
   if (!initializing && user) {

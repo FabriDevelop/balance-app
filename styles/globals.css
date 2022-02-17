@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 @layer components {
   .button {
     @apply p-3 font-semibold;
@@ -13,5 +25,50 @@
 
   .input {
     @apply max-w-xs bg-gray-200 py-3 pl-2.5 pr-5 font-medium outline-none;
+  }
+
+  .nav-item {
+    @apply flex cursor-pointer flex-col-reverse items-center gap-1 text-2xl xl:text-lg;
+  }
+
+  .switch {
+    @apply w-36 border-[1px] p-2;
+  }
+
+  .input-text {
+    @apply bg-slate-300 p-2 pr-8 outline-primary-600;
+  }
+
+  th,
+  td {
+    @apply mx-6 p-1 md:p-2;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-200;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-sm bg-[#bbb];
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-600;
+  }
+
+  body {
+    @apply md:overflow-hidden;
+  }
+
+  table {
+    @apply w-fit;
   }
 }

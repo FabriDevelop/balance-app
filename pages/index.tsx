@@ -1,18 +1,25 @@
 import Head from 'next/head'
-import Router from 'next/router'
-import { useEffect } from 'react'
-import { useAuth } from '../context/auth'
+import MovementForm from '../components/MovementForm'
+import BalanceInfo from '../components/BalanceInfo'
+import { motion } from 'framer-motion'
 
 export default function Home() {
-  const { logout, user } = useAuth()
-
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-4">
-      <h1>Hi {user?.displayName}!</h1>
-      <button className="bg-gray-300 p-3" onClick={logout}>
-        Log Out
-      </button>
-    </div>
+    <>
+      <Head>
+        <title>Balance</title>
+      </Head>
+      <motion.main
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+        className="container -m-24 mx-auto flex h-screen max-w-5xl flex-col 
+              items-center justify-center gap-16 md:flex-row"
+      >
+        <MovementForm />
+        <BalanceInfo />
+      </motion.main>
+    </>
   )
 }
 

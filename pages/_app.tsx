@@ -2,8 +2,8 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { AuthProvider } from '../context/auth'
 import { AuthGuard } from '../context/authGuard'
-import {} from 'next'
-import { ComponentType } from 'react'
+import Navbar from '../components/Navbar'
+import Head from 'next/head'
 
 function MyApp(props: AppProps) {
   const { Component, pageProps }: { Component: any; pageProps: any } = props
@@ -11,7 +11,10 @@ function MyApp(props: AppProps) {
     <AuthProvider>
       {Component.requireAuth ? (
         <AuthGuard>
-          <Component {...pageProps} />
+          <>
+            <Navbar />
+            <Component {...pageProps} />
+          </>
         </AuthGuard>
       ) : (
         <Component {...pageProps} />

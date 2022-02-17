@@ -1,4 +1,5 @@
 import { initializeApp, getApp, getApps, FirebaseApp } from 'firebase/app'
+import { getFirestore } from 'firebase/firestore'
 
 let app: FirebaseApp
 
@@ -16,5 +17,7 @@ if (getApps().length) {
 } else {
   app = initializeApp(firebaseConfig)
 }
+
+export const db = getFirestore()
 
 export default app
