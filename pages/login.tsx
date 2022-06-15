@@ -104,7 +104,7 @@ export default function login() {
             Desarrollado por
             <a
               className="flex cursor-pointer gap-1 text-primary-500 hover:text-primary-600"
-              href="https://github.com/FabriDevelop"
+              href="https://github.com/cfardev"
               target="_blank"
             >
               Carlos Arcia
